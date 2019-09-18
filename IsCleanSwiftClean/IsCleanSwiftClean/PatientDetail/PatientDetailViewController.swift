@@ -22,6 +22,9 @@ class PatientDetailViewController: UIViewController, PatientDetailDisplayLogic
     var interactor: PatientDetailBusinessLogic?
     var router: (NSObjectProtocol & PatientDetailRoutingLogic & PatientDetailDataPassing)?
     
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)

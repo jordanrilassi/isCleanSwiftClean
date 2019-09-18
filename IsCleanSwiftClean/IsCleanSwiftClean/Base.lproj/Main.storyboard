@@ -104,6 +104,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E7z-KN-gV4"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="ee9-Zt-21j" id="5qV-6q-Wf9"/>
+                        <outlet property="fullNameLabel" destination="J01-Ta-WVz" id="e4X-Bf-ncc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1B-1S-p5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
