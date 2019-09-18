@@ -52,12 +52,12 @@ class PatientsListViewController: UIViewController, PatientsListDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(PatientCell.self, forCellReuseIdentifier: "PatientCell")
-        fetchPatient()
+        fetchPatients()
     }
     
     // MARK: Views actions
 
-    func fetchPatient() {
+    func fetchPatients() {
         let request = PatientsList.Patients.Request()
         interactor?.fetchPatients(request: request)
     }
