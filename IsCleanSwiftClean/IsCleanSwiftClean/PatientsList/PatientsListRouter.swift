@@ -20,28 +20,28 @@ class PatientsListRouter: NSObject, PatientsListRoutingLogic, PatientsListDataPa
     // MARK: Routing
     
     func routeToPatientDetail(segue: UIStoryboardSegue?) {
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! PatientDetailViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToPatientDetail(source: dataStore!, destination: &destinationDS)
-//        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "PatientDetailViewController") as! PatientDetailViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToPatientDetail(source: dataStore!, destination: &destinationDS)
-//            navigateToPatientDetail(source: viewController!, destination: destinationVC)
-//        }
+        if let segue = segue {
+            let destinationVC = segue.destination as! PatientDetailViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataToPatientDetail(source: dataStore!, destination: &destinationDS)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "PatientDetailViewController") as! PatientDetailViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataToPatientDetail(source: dataStore!, destination: &destinationDS)
+            navigateToPatientDetail(source: viewController!, destination: destinationVC)
+        }
     }
 
     // MARK: Navigation
     
-//    func navigateToPatientDetail(source: PatientsListViewController, destination: PatientDetailViewController) {
-//        source.show(destination, sender: nil)
-//    }
+    func navigateToPatientDetail(source: PatientsListViewController, destination: PatientDetailViewController) {
+        source.show(destination, sender: nil)
+    }
 
     // MARK: Passing data
 
-//    func passDataToPatientDetail(source: PatientsListDataStore, destination: inout PatientDetailDataStore) {
-//        destination.patientId = source.patientId
-//    }
+    func passDataToPatientDetail(source: PatientsListDataStore, destination: inout PatientDetailDataStore) {
+        destination.patientId = source.patientId
+    }
 }

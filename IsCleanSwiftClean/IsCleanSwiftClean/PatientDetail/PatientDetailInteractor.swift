@@ -19,14 +19,14 @@ protocol PatientDetailBusinessLogic
 
 protocol PatientDetailDataStore
 {
-    //var name: String { get set }
+    var patientId: String { get set }
 }
 
 class PatientDetailInteractor: PatientDetailBusinessLogic, PatientDetailDataStore
 {
     var presenter: PatientDetailPresentationLogic?
     var worker: PatientDetailWorker?
-    //var name: String = ""
+    var patientId: String = ""
     
     // MARK: Do something
     
