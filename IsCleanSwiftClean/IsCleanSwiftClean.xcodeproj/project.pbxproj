@@ -12,12 +12,12 @@
 		1775BC32232BCC31007B5522 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1775BC30232BCC31007B5522 /* Main.storyboard */; };
 		1775BC34232BCC33007B5522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1775BC33232BCC33007B5522 /* Assets.xcassets */; };
 		1775BC37232BCC33007B5522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1775BC35232BCC33007B5522 /* LaunchScreen.storyboard */; };
-		1775BC51232BCC90007B5522 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4B232BCC90007B5522 /* HomePresenter.swift */; };
-		1775BC52232BCC90007B5522 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4C232BCC90007B5522 /* HomeWorker.swift */; };
-		1775BC53232BCC90007B5522 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4D232BCC90007B5522 /* HomeRouter.swift */; };
-		1775BC54232BCC90007B5522 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4E232BCC90007B5522 /* HomeModels.swift */; };
-		1775BC55232BCC90007B5522 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4F232BCC90007B5522 /* HomeViewController.swift */; };
-		1775BC56232BCC90007B5522 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC50232BCC90007B5522 /* HomeInteractor.swift */; };
+		1775BC51232BCC90007B5522 /* PatientsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4B232BCC90007B5522 /* PatientsListPresenter.swift */; };
+		1775BC52232BCC90007B5522 /* PatientsListPresenterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4C232BCC90007B5522 /* PatientsListPresenterWorker.swift */; };
+		1775BC53232BCC90007B5522 /* PatientsListPresenterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4D232BCC90007B5522 /* PatientsListPresenterRouter.swift */; };
+		1775BC54232BCC90007B5522 /* PatientsListPresenterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4E232BCC90007B5522 /* PatientsListPresenterModels.swift */; };
+		1775BC55232BCC90007B5522 /* PatientsListPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC4F232BCC90007B5522 /* PatientsListPresenterViewController.swift */; };
+		1775BC56232BCC90007B5522 /* PatientsListPresenterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC50232BCC90007B5522 /* PatientsListPresenterInteractor.swift */; };
 		1775BC6A232BCEC5007B5522 /* PatientDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC64232BCEC5007B5522 /* PatientDetailPresenter.swift */; };
 		1775BC6B232BCEC5007B5522 /* PatientDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC65232BCEC5007B5522 /* PatientDetailWorker.swift */; };
 		1775BC6C232BCEC5007B5522 /* PatientDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775BC66232BCEC5007B5522 /* PatientDetailRouter.swift */; };
@@ -38,12 +38,12 @@
 		1775BC33232BCC33007B5522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1775BC36232BCC33007B5522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1775BC38232BCC33007B5522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1775BC4B232BCC90007B5522 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		1775BC4C232BCC90007B5522 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
-		1775BC4D232BCC90007B5522 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		1775BC4E232BCC90007B5522 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
-		1775BC4F232BCC90007B5522 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1775BC50232BCC90007B5522 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		1775BC4B232BCC90007B5522 /* PatientsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListPresenter.swift; sourceTree = "<group>"; };
+		1775BC4C232BCC90007B5522 /* PatientsListPresenterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListPresenterWorker.swift; sourceTree = "<group>"; };
+		1775BC4D232BCC90007B5522 /* PatientsListPresenterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListPresenterRouter.swift; sourceTree = "<group>"; };
+		1775BC4E232BCC90007B5522 /* PatientsListPresenterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListPresenterModels.swift; sourceTree = "<group>"; };
+		1775BC4F232BCC90007B5522 /* PatientsListPresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListPresenterViewController.swift; sourceTree = "<group>"; };
+		1775BC50232BCC90007B5522 /* PatientsListPresenterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListPresenterInteractor.swift; sourceTree = "<group>"; };
 		1775BC64232BCEC5007B5522 /* PatientDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailPresenter.swift; sourceTree = "<group>"; };
 		1775BC65232BCEC5007B5522 /* PatientDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailWorker.swift; sourceTree = "<group>"; };
 		1775BC66232BCEC5007B5522 /* PatientDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailRouter.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 				1775BC73232BD06F007B5522 /* Models */,
 				1775BC70232BD03C007B5522 /* Repositories */,
 				1775BC57232BCE01007B5522 /* PatientDetail */,
-				1775BC3E232BCC40007B5522 /* Home */,
+				1775BC3E232BCC40007B5522 /* PatientsList */,
 				1775BC2C232BCC31007B5522 /* AppDelegate.swift */,
 				1775BC2E232BCC31007B5522 /* ViewController.swift */,
 				1775BC30232BCC31007B5522 /* Main.storyboard */,
@@ -100,18 +100,18 @@
 			path = IsCleanSwiftClean;
 			sourceTree = "<group>";
 		};
-		1775BC3E232BCC40007B5522 /* Home */ = {
+		1775BC3E232BCC40007B5522 /* PatientsList */ = {
 			isa = PBXGroup;
 			children = (
 				178EB15B232FFA1B003A8B51 /* Views */,
-				1775BC4B232BCC90007B5522 /* HomePresenter.swift */,
-				1775BC4C232BCC90007B5522 /* HomeWorker.swift */,
-				1775BC4D232BCC90007B5522 /* HomeRouter.swift */,
-				1775BC4E232BCC90007B5522 /* HomeModels.swift */,
-				1775BC4F232BCC90007B5522 /* HomeViewController.swift */,
-				1775BC50232BCC90007B5522 /* HomeInteractor.swift */,
+				1775BC4B232BCC90007B5522 /* PatientsListPresenter.swift */,
+				1775BC4C232BCC90007B5522 /* PatientsListPresenterWorker.swift */,
+				1775BC4D232BCC90007B5522 /* PatientsListPresenterRouter.swift */,
+				1775BC4E232BCC90007B5522 /* PatientsListPresenterModels.swift */,
+				1775BC4F232BCC90007B5522 /* PatientsListPresenterViewController.swift */,
+				1775BC50232BCC90007B5522 /* PatientsListPresenterInteractor.swift */,
 			);
-			path = Home;
+			path = PatientsList;
 			sourceTree = "<group>";
 		};
 		1775BC57232BCE01007B5522 /* PatientDetail */ = {
@@ -225,22 +225,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1775BC6E232BCEC5007B5522 /* PatientDetailViewController.swift in Sources */,
-				1775BC51232BCC90007B5522 /* HomePresenter.swift in Sources */,
+				1775BC51232BCC90007B5522 /* PatientsListPresenter.swift in Sources */,
 				1775BC2F232BCC31007B5522 /* ViewController.swift in Sources */,
 				1775BC6F232BCEC5007B5522 /* PatientDetailInteractor.swift in Sources */,
 				1775BC6B232BCEC5007B5522 /* PatientDetailWorker.swift in Sources */,
 				1775BC72232BD04B007B5522 /* PatientInteractor.swift in Sources */,
-				1775BC52232BCC90007B5522 /* HomeWorker.swift in Sources */,
+				1775BC52232BCC90007B5522 /* PatientsListPresenterWorker.swift in Sources */,
 				1775BC6D232BCEC5007B5522 /* PatientDetailModels.swift in Sources */,
 				1775BC6C232BCEC5007B5522 /* PatientDetailRouter.swift in Sources */,
-				1775BC56232BCC90007B5522 /* HomeInteractor.swift in Sources */,
+				1775BC56232BCC90007B5522 /* PatientsListPresenterInteractor.swift in Sources */,
 				1775BC6A232BCEC5007B5522 /* PatientDetailPresenter.swift in Sources */,
 				1775BC2D232BCC31007B5522 /* AppDelegate.swift in Sources */,
-				1775BC54232BCC90007B5522 /* HomeModels.swift in Sources */,
+				1775BC54232BCC90007B5522 /* PatientsListPresenterModels.swift in Sources */,
 				178EB15E232FFA33003A8B51 /* PatientCell.swift in Sources */,
 				1775BC75232BD077007B5522 /* Patient.swift in Sources */,
-				1775BC55232BCC90007B5522 /* HomeViewController.swift in Sources */,
-				1775BC53232BCC90007B5522 /* HomeRouter.swift in Sources */,
+				1775BC55232BCC90007B5522 /* PatientsListPresenterViewController.swift in Sources */,
+				1775BC53232BCC90007B5522 /* PatientsListPresenterRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

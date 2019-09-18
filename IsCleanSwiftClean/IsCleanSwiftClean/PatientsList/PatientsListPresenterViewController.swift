@@ -5,20 +5,20 @@
 
 import UIKit
 
-protocol HomeDisplayLogic: class {
-    func displayPatients(viewModel: Home.Patients.ViewModel)
-    func displayPatientDetail(viewModel: Home.Select.ViewModel)
+protocol PatientsListDisplayLogic: class {
+    func displayPatients(viewModel: PatientsList.Patients.ViewModel)
+    func displayPatientDetail(viewModel: PatientsList.Select.ViewModel)
     func displayError(error: Error?)
 }
 
-class HomeViewController: UIViewController, HomeDisplayLogic {
-    var interactor: HomeBusinessLogic?
-    var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
+class PatientsListViewController: UIViewController, PatientsListDisplayLogic {
+    var interactor: PatientsListBusinessLogic?
+    var router: (NSObjectProtocol & PatientsListRoutingLogic & PatientsListDataPassing)?
 
     @IBOutlet weak var tableView: UITableView!
 
     var fullNameTextField: UITextField = UITextField()
-    var patients: [Patient] = []
+    var patientModels: [PatientsList.Patients.ViewModel.PatientModel] = []
     
     // MARK: Object lifecycle
     
@@ -36,9 +36,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     private func setup() {
         let viewController = self
-        let interactor = HomeInteractor()
-        let presenter = HomePresenter()
-        let router = HomeRouter()
+        let interactor = PatientsListInteractor()
+        let presenter = PatientsListPresenter()
+        let router = PatientsListRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -58,16 +58,16 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     // MARK: Views actions
 
     func fetchPatient() {
-        let request = Home.Patients.Request()
+        let request = PatientsList.Patients.Request()
         interactor?.fetchPatients(request: request)
     }
     
-    func displayPatients(viewModel: Home.Patients.ViewModel) {
-        patients = viewModel.patients
+    func displayPatients(viewModel: PatientsList.Patients.ViewModel) {
+        patientModels = viewModel.patientModels
         tableView.reloadData()
     }
 
-    func displayPatientDetail(viewModel: Home.Select.ViewModel) {
+    func displayPatientDetail(viewModel: PatientsList.Select.ViewModel) {
         router?.routeToPatientDetail(segue: nil)
     }
 
@@ -76,22 +76,22 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension PatientsListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return patients.count
+        return patientModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PatientCell", for: indexPath)
 
-        let patient = patients[indexPath.row]
-        cell.textLabel?.text = "\(patient.firstName) \(patient.lastName)"
+        let patientModel = patientModels[indexPath.row]
+        cell.textLabel?.text = patientModel.fullName
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let patient = patients[indexPath.row]
-        let request = Home.Select.Request(patientId: patient.id)
+        let patientModel = patientModels[indexPath.row]
+        let request = PatientsList.Select.Request(patientId: patientModel.id)
         interactor?.selectPatient(request: request)
         tableView.deselectRow(at: indexPath, animated: true)
     }

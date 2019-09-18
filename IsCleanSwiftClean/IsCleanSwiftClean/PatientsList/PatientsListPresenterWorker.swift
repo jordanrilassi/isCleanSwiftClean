@@ -5,10 +5,10 @@
 
 import UIKit
 
-class HomeWorker {
-    func fetchPatients() -> Home.Patients.Response {
+class PatientsListWorker {
+    func fetchPatients() -> PatientsList.Patients.Response {
         let patients = PatientDBRepository().fetchPatients()
-        let response = Home.Patients.Response(patients: patients)
+        let response = PatientsList.Patients.Response(patients: patients)
         return response
     }
 }

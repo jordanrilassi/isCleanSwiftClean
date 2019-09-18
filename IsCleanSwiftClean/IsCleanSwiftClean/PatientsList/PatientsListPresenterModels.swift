@@ -5,7 +5,7 @@
 
 import UIKit
 
-enum Home {
+enum PatientsList {
     // MARK: Use cases
     
     enum Patients {
@@ -15,7 +15,11 @@ enum Home {
             let patients: [Patient]
         }
         struct ViewModel {
-            let patients: [Patient]
+            struct PatientModel {
+                let id: String
+                let fullName: String
+            }
+            let patientModels: [PatientModel]
         }
     }
 

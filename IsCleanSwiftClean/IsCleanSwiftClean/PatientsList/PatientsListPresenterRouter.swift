@@ -5,17 +5,17 @@
 
 import UIKit
 
-@objc protocol HomeRoutingLogic {
+@objc protocol PatientsListRoutingLogic {
     func routeToPatientDetail(segue: UIStoryboardSegue?)
 }
 
-protocol HomeDataPassing {
-    var dataStore: HomeDataStore? { get }
+protocol PatientsListDataPassing {
+    var dataStore: PatientsListDataStore? { get }
 }
 
-class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
-    weak var viewController: HomeViewController?
-    var dataStore: HomeDataStore?
+class PatientsListRouter: NSObject, PatientsListRoutingLogic, PatientsListDataPassing {
+    weak var viewController: PatientsListViewController?
+    var dataStore: PatientsListDataStore?
     
     // MARK: Routing
     
@@ -35,13 +35,13 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 
     // MARK: Navigation
     
-    func navigateToPatientDetail(source: HomeViewController, destination: PatientDetailViewController) {
+    func navigateToPatientDetail(source: PatientsListViewController, destination: PatientDetailViewController) {
         source.show(destination, sender: nil)
     }
 
     // MARK: Passing data
 
-    func passDataToPatientDetail(source: HomeDataStore, destination: inout PatientDetailDataStore) {
+    func passDataToPatientDetail(source: PatientsListDataStore, destination: inout PatientDetailDataStore) {
         destination.patientId = source.patientId
     }
 }
