@@ -14,7 +14,8 @@ import UIKit
 
 class PatientDetailWorker
 {
-    func doSomeWork()
-    {
+    func fetchPatient(patientId: String) -> PatientDetail.Patient.Response? {
+        guard let patient = PatientDBRepository().fetchPatient(with: patientId) else { return nil }
+        return PatientDetail.Patient.Response(firstName: patient.firstName, lastName: patient.lastName, gender: patient.gender)
     }
 }

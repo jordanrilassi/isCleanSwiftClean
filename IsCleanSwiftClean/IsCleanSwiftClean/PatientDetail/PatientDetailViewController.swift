@@ -87,6 +87,7 @@ class PatientDetailViewController: UIViewController, PatientDetailDisplayLogic
     
     func displayPatientDetail(viewModel: PatientDetail.Patient.ViewModel)
     {
-        //nameTextField.text = viewModel.name
+        fullNameLabel.text = viewModel.fullName
+        avatarImageView.image = viewModel.avatarImage
     }
 }
