@@ -14,7 +14,7 @@ import UIKit
 
 protocol PatientDetailDisplayLogic: class
 {
-    func displaySomething(viewModel: PatientDetail.Something.ViewModel)
+    func displayPatientDetail(viewModel: PatientDetail.Patient.ViewModel)
 }
 
 class PatientDetailViewController: UIViewController, PatientDetailDisplayLogic
@@ -72,20 +72,20 @@ class PatientDetailViewController: UIViewController, PatientDetailDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        doSomething()
+        fetchPatientDetail()
     }
     
     // MARK: Do something
     
     //@IBOutlet weak var nameTextField: UITextField!
     
-    func doSomething()
+    func fetchPatientDetail()
     {
-        let request = PatientDetail.Something.Request()
-        interactor?.doSomething(request: request)
+        let request = PatientDetail.Patient.Request()
+        interactor?.fetchPatientDetail(request: request)
     }
     
-    func displaySomething(viewModel: PatientDetail.Something.ViewModel)
+    func displayPatientDetail(viewModel: PatientDetail.Patient.ViewModel)
     {
         //nameTextField.text = viewModel.name
     }

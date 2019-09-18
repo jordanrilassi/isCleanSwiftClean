@@ -16,16 +16,21 @@ enum PatientDetail
 {
     // MARK: Use cases
     
-    enum Something
+    enum Patient
     {
         struct Request
         {
         }
         struct Response
         {
+            let firstName: String
+            let lastName: String
+            let gender: Gender
         }
         struct ViewModel
         {
+            let fullName: String
+            let avatarImage: UIImage
         }
     }
 }

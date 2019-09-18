@@ -14,7 +14,7 @@ import UIKit
 
 protocol PatientDetailBusinessLogic
 {
-    func doSomething(request: PatientDetail.Something.Request)
+    func fetchPatientDetail(request: PatientDetail.Patient.Request)
 }
 
 protocol PatientDetailDataStore
@@ -30,12 +30,12 @@ class PatientDetailInteractor: PatientDetailBusinessLogic, PatientDetailDataStor
     
     // MARK: Do something
     
-    func doSomething(request: PatientDetail.Something.Request)
+    func fetchPatientDetail(request: PatientDetail.Patient.Request)
     {
         worker = PatientDetailWorker()
         worker?.doSomeWork()
         
-        let response = PatientDetail.Something.Response()
-        presenter?.presentSomething(response: response)
+        let response = PatientDetail.Patient.Response(firstName: "", lastName: "", gender: .male)
+        presenter?.presentPatientDetail(response: response)
     }
 }

@@ -14,7 +14,7 @@ import UIKit
 
 protocol PatientDetailPresentationLogic
 {
-    func presentSomething(response: PatientDetail.Something.Response)
+    func presentPatientDetail(response: PatientDetail.Patient.Response)
 }
 
 class PatientDetailPresenter: PatientDetailPresentationLogic
@@ -23,9 +23,9 @@ class PatientDetailPresenter: PatientDetailPresentationLogic
     
     // MARK: Do something
     
-    func presentSomething(response: PatientDetail.Something.Response)
+    func presentPatientDetail(response: PatientDetail.Patient.Response)
     {
-        let viewModel = PatientDetail.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+        let viewModel = PatientDetail.Patient.ViewModel(fullName: "", avatarImage: UIImage())
+        viewController?.displayPatientDetail(viewModel: viewModel)
     }
 }
