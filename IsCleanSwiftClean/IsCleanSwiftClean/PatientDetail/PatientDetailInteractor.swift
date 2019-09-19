@@ -33,9 +33,8 @@ class PatientDetailInteractor: PatientDetailBusinessLogic, PatientDetailDataStor
     func fetchPatientDetail(request: PatientDetail.Patient.Request)
     {
         worker = PatientDetailWorker()
-        worker?.doSomeWork()
-        
-        let response = PatientDetail.Patient.Response(firstName: "", lastName: "", gender: .male)
+        guard let response = worker?.fetchPatientDetail(patientId: patientId) else { return }
+
         presenter?.presentPatientDetail(response: response)
     }
 }
