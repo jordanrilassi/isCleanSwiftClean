@@ -25,7 +25,8 @@ class PatientDetailPresenter: PatientDetailPresentationLogic
     
     func presentPatientDetail(response: PatientDetail.Patient.Response)
     {
-        let viewModel = PatientDetail.Patient.ViewModel(fullName: "", avatarImage: UIImage())
+        let fullName = "\(response.firstName) \(response.lastName)"
+        let viewModel = PatientDetail.Patient.ViewModel(fullName: fullName, avatarImage: response.gender.image)
         viewController?.displayPatientDetail(viewModel: viewModel)
     }
 }
